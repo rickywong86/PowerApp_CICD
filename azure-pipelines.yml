@@ -31,7 +31,7 @@ steps:
   inputs:
     authenticationType: 'PowerPlatformSPN'
     PowerPlatformSPN: 'DEV'
-    SolutionName: 'TestAppSolution'
+    SolutionName: 'Accountmanagement'
     SolutionOutputFile: '$(Build.StagingDirectory)/TestAppSolution_Unmanaged.zip'
     AsyncOperation: true
     MaxAsyncWaitTime: '60'
