@@ -14,3 +14,42 @@ steps:
   fetchDepth: 0
   fetchTags: true
   persistCredentials: true
+- task: CmdLine@2
+  inputs:
+    script: |
+      git config --global user.email "ricky86uk@gmail.com"
+      git config --global user.name "Ricky Wong"
+      git checkout $(Build.SourceBranchName)
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
+- task: PowerPlatformWhoAmi@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: 'DEV'
+- task: PowerPlatformExportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: 'DEV'
+    SolutionName: 'TestAppSolution'
+    SolutionOutputFile: '$(Build.StagingDirectory)/TestAppSolution_Unmanaged.zip'
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+- task: PowerPlatformUnpackSolution@2
+  inputs:
+    SolutionInputFile: '$(Build.StagingDirectory)/TestAppSolution_Unmanaged.zip'
+    SolutionTargetFolder: '$(Build.SourcesDirectory)/TestAppSolution'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd $(Build.SourcesDirectory)
+      git add .
+      
+      git commit -m "Updated the solution"
+      
+      git push origin $(Build.SourceBranchName)
