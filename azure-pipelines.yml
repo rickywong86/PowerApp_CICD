@@ -30,15 +30,15 @@ steps:
 - task: PowerPlatformExportSolution@2
   inputs:
     authenticationType: 'PowerPlatformSPN'
-    PowerPlatformSPN: 'DEV'
-    SolutionName: 'Accountmanagement'
-    SolutionOutputFile: '$(Build.StagingDirectory)/TestAppSolution_Unmanaged.zip'
+    PowerPlatformSPN: '$(BuildEnvironment)'
+    SolutionName: '$(SolutionName)'
+    SolutionOutputFile: '$(Build.StagingDirectory)/unmanaged-solutions/$(SolutionName).zip'
     AsyncOperation: true
     MaxAsyncWaitTime: '60'
 - task: PowerPlatformUnpackSolution@2
   inputs:
-    SolutionInputFile: '$(Build.StagingDirectory)/TestAppSolution_Unmanaged.zip'
-    SolutionTargetFolder: '$(Build.SourcesDirectory)/TestAppSolution'
+    SolutionInputFile: '$(Build.StagingDirectory)/unmanaged-solutions/$(SolutionName).zip'
+    SolutionTargetFolder: '$(Build.SourcesDirectory)/managed-solutions/$(SolutionName)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.SourcesDirectory)'
