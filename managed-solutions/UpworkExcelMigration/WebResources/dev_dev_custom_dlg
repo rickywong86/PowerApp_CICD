@@ -1,0 +1,38 @@
+function openCustomPageDialog(primaryControl, firstSelectedItemId, selectedEntityTypeName)
+{
+	var formContext = primaryControl;
+	var accountName = formContext.getControl("name").getAttribute().getValue();
+	var telephone = formContext.getControl("telephone1").getAttribute().getValue();
+	
+    // Centered Dialog
+    var pageInput = {
+        pageType: "custom",
+        name: "dev_autoflowdialog_b465b",
+        entityName: selectedEntityTypeName,
+        recordId: firstSelectedItemId,
+    };
+    var navigationOptions = {
+        target: 2,
+        position: 1,
+        height: {
+            value: 350,
+            unit: "px"
+        },
+        width: {
+            value: 350,
+            unit: "px"
+        },
+	title: "Send Data"
+    };
+	
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+        function () {
+            // Refresh the main form when the dialog is closed
+            primaryControl.data.refresh();
+        }
+    ).catch (
+        function (error) {
+            // Handle error
+        }
+    );
+}

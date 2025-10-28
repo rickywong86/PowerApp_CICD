@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.25102.135" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25102.135" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25103.00142">
+  <SolutionManifest>
+    <UniqueName>UpworkExcelMigration</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="UpworkExcelMigration" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>DEV</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="DEV" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>dev</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>77573</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="2" />
+      <RootComponent type="29" id="{30d9c97e-21b0-f011-bbd3-000d3aadbf2b}" behavior="0" />
+      <RootComponent type="29" id="{45937be0-86a3-f011-bbd2-002248851813}" behavior="0" />
+      <RootComponent type="300" schemaName="dev_autoflowdialog_b465b" behavior="0" />
+      <RootComponent type="300" schemaName="dev_excelmigration_97236" behavior="0" />
+      <RootComponent type="300" schemaName="dev_integrationmdadefaultcommandlibrary_6916d" behavior="0" />
+      <RootComponent type="300" schemaName="dev_powerfxlearning_6f094" behavior="0" />
+      <RootComponent type="61" schemaName="dev_dev_custom_dlg" behavior="0" />
+      <RootComponent type="62" schemaName="dev_IntegrationMDA" behavior="0" />
+      <RootComponent type="80" schemaName="dev_IntegrationMDA" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="account" displayName="Account" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="account" displayName="Account" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="correlatedsubjectchanged" displayName="Correlated subject changed" parentSchemaName="email" parentDisplayName="Email" solution="msft_ActivitiesInfra_Extensions (9.2.0.73)">
+          <package appName="msdynce_Activities" version="9.0.25095.250930001">msdynce_EnableUCIByDefault (9.0.25095.250930001)</package>
+          <package appName="ActivitiesInfra Package" version="1.0.0.0">msft_ActivitiesInfra_Anchor (1.0.0.0)</package>
+        </Required>
+        <Dependent type="29" displayName="CustomUnboundProcess" id="{45937be0-86a3-f011-bbd2-002248851813}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="isduplicatesenderunresolved" displayName="Is Duplicate Sender Unresolved" parentSchemaName="email" parentDisplayName="Email" solution="msft_ActivitiesInfra_Extensions (9.2.0.73)">
+          <package appName="msdynce_Activities" version="9.0.25095.250930001">msdynce_EnableUCIByDefault (9.0.25095.250930001)</package>
+          <package appName="ActivitiesInfra Package" version="1.0.0.0">msft_ActivitiesInfra_Anchor (1.0.0.0)</package>
+        </Required>
+        <Dependent type="29" displayName="CustomUnboundProcess" id="{45937be0-86a3-f011-bbd2-002248851813}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="new_5Ffunction-20app-20api" displayName="Function App API" solution="Active" id="{e83a3e5c-7b16-4787-a48d-954c91cf99c8}" />
+        <Dependent type="29" displayName="Function-App-Call" id="{30d9c97e-21b0-f011-bbd3-000d3aadbf2b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="new_5Ffunction-20app-20api" displayName="Function App API" solution="Active" id="{e83a3e5c-7b16-4787-a48d-954c91cf99c8}" />
+        <Dependent type="connectionreference" displayName="dev_sharednew5ffunction20app20api5f455edfc2ee8ff206_f0030" id.connectionreferencelogicalname="dev_sharednew5ffunction20app20api5f455edfc2ee8ff206_f0030" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
+        <Dependent type="80" schemaName="dev_IntegrationMDA" displayName="Integration-MDA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.15)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.23">PowerAppsAppFramework_Anchor (1.0.0.23)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=dev_IntegrationMDA,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="dev_IntegrationMDA" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

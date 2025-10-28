@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="dev_Environment_name">
+  <description default="Environment name">
+    <label description="Environment name" languagecode="1033" />
+  </description>
+  <displayname default="Environment_name">
+    <label description="Environment_name" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>
